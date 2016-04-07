@@ -15,7 +15,6 @@ object SearchEngine {
 
   type RankingList = List[(DocId, DocName, Int)]
 
-
   def loadWords(dictionary: Dictionary, file: File, index: Int):Dictionary = {
     val fileName = file.getName
     Tools.wordSplitter(Source.fromFile(file).mkString)

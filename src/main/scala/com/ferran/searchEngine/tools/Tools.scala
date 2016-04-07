@@ -15,7 +15,4 @@ object Tools {
     pattern.findAllIn(str).toList
   }
 
-
-
-
 }

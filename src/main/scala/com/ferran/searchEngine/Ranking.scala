@@ -5,7 +5,7 @@ import com.ferran.searchEngine.SearchEngine.{RankingList, DocId, DocName}
 
 object Ranking {
   def getRanking(results: Map[DocId, (DocName, Int)]): RankingList = {
-    results.toList.sortBy(_._2._2).take(10)
+    results.toList.sortWith( (a,b) => a._2._2 > b._2._2 ).take(10)
       .map { res =>
         (res._1, res._2._1, res._2._2)
       }
